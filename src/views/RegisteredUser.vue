@@ -1,24 +1,21 @@
 <template>
     <div class = "navbar">  
       <div class="wrap">
-          <div class="search">
-            <input type="text" class="searchTerm" placeholder="Type book title, author or genre">
+          <div class="searchimg">
+            <input type="text" class="searchLine" placeholder="Type book title, author or genre">
             <button type="submit" class="searchButton">
             </button>
             <img class = "searchlogo" alt="search glass" src="@/assets/search.png">
           </div>
         </div>
-        <button class="button"> 
-            <router-link to="/login">
-                Sign up
-            </router-link>
-        </button>
-        <button class="register"> <router-link to="/registered">Register</router-link>
+        <button class="rgsterbtn"> <router-link to="/">
+            <img class = "rgsterlogo" alt="register logo" src="@/assets/Vector.png">
+        </router-link>
         </button>
     </div>
     <div>
       <img class = "bgrectangle" alt="Background rectangle" src="@/assets/bgrectangle.png">
-      <h class = "randombk"> #RANDOM BOOK</h>
+      <h class = "randombk"> #SUGGESTED FOR YOU</h>
       <h1 class = "mba">The Visual MBA</h1>
       <h2 class = "upperau">by Jason Barron</h2>
       <img class = "bgellipse" alt="Background ellipse" src="@/assets/bgellipse.png">
@@ -53,13 +50,13 @@
       <p class = "auwork">Austin Kleon</p>
       <!--stars-->
     </div>
-    <router-view />
+      <router-view />
 </template>  
 <script>
 export default {
     name: 'App',
     // components: {
-    // }
+    // } 
 }
 </script>
 <style>
@@ -104,21 +101,26 @@ export default {
     line-height: 17px;
     color: #5C5969;
 }
-.search {
+.searchimg {
     width: 100%;
     position: absolute;
     display: flex;
+    top: 9px;
+    position: absolute;
+    display: flex;
+    left: 838px;
 }
-.searchTerm {
-    width: 879px;
-    height: 34px;
-    left: 562px;
-    top: 30px;
+.searchLine {
+    left: -153px;
+    top: -7px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 1050px;
+    height: 47px;
+    left: -1040px;
+    background: #FFFFFF;
     border: 0.5px solid #D0CAE9;
-    border-right: none;
-    padding: 5px;
     border-radius: 10px;
-    outline: none;
 }
 .searchTerm:focus{
     color: #380136;
@@ -147,34 +149,22 @@ export default {
     top: 39px;
     border-radius: 0px;
 }
-.button {
-    display: grid;
+.rgsterlogo {
+    height: 28.065189361572266px;
+    width: 19.323333740234375px;
+    left: 7.572265625px;
+    top: 2.832305908203125px;
+    border-radius: 0px;
+}
+.rgsterbtn {
     position: absolute;
     width: 139px;
     height: 47px;
-    left: 1465px;
+    left: 1628px;
     top: 30px;
-    background: #F2F0FE;
+    background: #695AC9;
     border-radius: 10px;
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    /* display: inline-block; */
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    font-family: 'Segoe UI';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 9px;
-    align-items: center;
-    appearance: none;
-}
-.button a {
-    text-decoration: none;
-    color: #695AC9;
+    border: 0;
 }
 .readmore {
     position: absolute;
@@ -196,29 +186,6 @@ export default {
     text-align:center;
 }
 .readmore a {
-    text-decoration: none;
-    color: #F2F0FE;
-}
-.register {
-    position: absolute;
-    background-color: #695AC9;
-    border-radius: 10px;
-    width: 139px;
-    height: 45px;
-    left: 1628px;
-    top: 33px;
-    font-family: 'Segoe UI';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 24px;
-    display: inline-block;
-    align-items: center;
-    text-align: center;
-    border: 0;
-    font-family: 'Segoe UI';
-}
-.register a {
     text-decoration: none;
     color: #F2F0FE;
 }
